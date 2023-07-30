@@ -1,87 +1,115 @@
 import { useState } from "react";
+import styled from "styled-components";
 
 import { AiOutlineHome, AiOutlineMenu } from "react-icons/ai";
 import { GrProjects, GrAchievement } from "react-icons/gr";
 import {BsPersonVcard} from 'react-icons/bs'
 import {FiSmartphone} from 'react-icons/fi'
 
+
 const Navbar = () => {
   const [Navbar, setNavbar] = useState(false);
 
   const DisplayNav = () => {
-    setNavbar(!Navbar);
+    setNavbar(!Navbar)
   };
 
   return (
-    <div>
+    
+    <NavigationBar>
+      
       <AiOutlineMenu
-        onClick={DisplayNav}
-        className="absolute z-50 transition duration-300 ease-in-out cursor-pointer top-4 right-4 animate-bounce"
+        onClick={()=>DisplayNav()}
+        className="absolute cursor-pointer z-[99] right-4 top-4 md:hidden"
         size={20}
       />
-      {Navbar ? (
-        <div className="fixed z-40 flex flex-col items-center justify-center w-full h-full p-2 text-center bg-color-back ">
+      { Navbar ? (
+        <SideNavIcons className="fixed z-[100] flex flex-col items-center justify-center w-full h-full p-8 text-center md:hidden bg-slate-400">
           <a
             href="#home"
-            className="m-2.5 flex justify-center shadow-lg w-[75%] p-4 rounded-full shadow-gray-400 hover:scale-110 duration-200 bg-white/80 text-black transition"
+            className="m-2.5 flex justify-center shadow-lg w-[75%] p-4 rounded-full shadow-gray-400 hover:scale-110 duration-300 bg-white/80 text-black transition"
           >
             <AiOutlineHome size={25}></AiOutlineHome>
             <span className="pl-4 font-montserrat-regular">Home</span>
           </a>
           <a
             href="#skills"
-            className="m-2.5 flex justify-center shadow-lg w-[75%] p-4 rounded-full shadow-gray-400 hover:scale-110 duration-200 bg-white/80 text-black"
+            className="m-2.5 flex justify-center shadow-lg w-[75%] p-4 rounded-full shadow-gray-400 hover:scale-110 duration-300 bg-white/80 text-black"
           >
             <GrAchievement className="" color="white" size={25}></GrAchievement>
             <span className="pl-4 font-montserrat-regular">Skills</span>
           </a>
           <a
             href="#projects"
-            className="m-2.5 flex justify-center shadow-lg w-[75%] p-4 rounded-full shadow-gray-400 hover:scale-110 duration-200 bg-white/80 text-black"
+            className="m-2.5 flex justify-center shadow-lg w-[75%] p-4 rounded-full shadow-gray-400 hover:scale-110 duration-300 bg-white/80 text-black"
           >
             <GrProjects size={25}></GrProjects>
             <span className="pl-4 font-montserrat-regular">Projects</span>
           </a>
           <a
             href="#resume"
-            className="m-2.5 flex justify-center shadow-lg w-[75%] p-4 rounded-full shadow-gray-400 hover:scale-110 duration-200 bg-white/80 text-black"
+            className="m-2.5 flex justify-center shadow-lg w-[75%] p-4 rounded-full shadow-gray-400 hover:scale-110 duration-300 bg-white/80 text-black"
           >
             <BsPersonVcard size={25}></BsPersonVcard>
             <span className="pl-4 font-montserrat-regular">Resume</span>
           </a>
           <a
             href="#contact"
-            className="m-2.5 flex justify-center shadow-lg w-[75%] p-4 rounded-full shadow-gray-400 hover:scale-110 duration-200 bg-white/80 text-black"
+            className="m-2.5 flex justify-center shadow-lg w-[75%] p-4 rounded-full shadow-gray-400 hover:scale-110 duration-300 bg-white/80 text-black"
           >
             <FiSmartphone size={25}></FiSmartphone>
             <span className="pl-4 font-montserrat-regular">Contact</span>
           </a>
-        </div>
+        </SideNavIcons>
       ) : (
         ""
       )}
 
-      <div className="md:block">
-        <div className="flex flex-col p-4 flex-nowrap">
-          <a href="#home" className="fixed p-4 m-2 bg-gray-100 rounded-full shadow-lg shadow-gray-400 top-[22%] z-50 ease-in transit">
-            <AiOutlineHome size={30} />
+      <MainNavIcons className="fixed hidden md:block top-[25%] z-50">
+        <div className="flex flex-col p-4">
+        <a
+            href="#home"
+            className="m-2.5 p-4 flex justify-center shadow-lg w-[75%] rounded-full shadow-gray-400 hover:scale-110 duration-300 bg-white/80 text-black transition top-[25%]"
+          >
+            <AiOutlineHome size={25}></AiOutlineHome>
           </a>
-          <a href="#skills" className="fixed p-4 m-2 bg-gray-100 rounded-full shadow-lg shadow-gray-400 top-[32%] z-50">
-            <GrAchievement size={30} />
+          <a
+            href="#skills"
+            className="m-2.5 flex justify-center shadow-lg p-4 w-[75%] rounded-full shadow-gray-400 hover:scale-110 duration-300 bg-white/80 text-black"
+          >
+            <GrAchievement size={25}></GrAchievement>
+          
           </a>
-          <a href="#projects" className="fixed p-4 m-2 bg-gray-100 rounded-full shadow-lg shadow-gray-400 top-[42%] z-50">
-            <GrProjects size={30} />
+          <a
+            href="#projects"
+            className="m-2.5 flex justify-center shadow-lg p-4 w-[75%] rounded-full shadow-gray-400 hover:scale-110 duration-300 bg-white/80 text-black"
+          >
+            <GrProjects size={25}></GrProjects>
+           
           </a>
-          <a href="#resume" className="fixed p-4 m-2 bg-gray-100 rounded-full shadow-lg shadow-gray-400 top-[52%] z-50"> 
-            <BsPersonVcard size={30} />
+          <a
+            href="#resume"
+            className="m-2.5 flex justify-center shadow-lg p-4 rounded-full w-[75%] shadow-gray-400 hover:scale-110 duration-300 bg-white/80 text-black"
+          >
+            <BsPersonVcard size={25}></BsPersonVcard>
+
           </a>
-          <a href="#contact" className="fixed p-4 m-2 bg-gray-100 rounded-full shadow-lg shadow-gray-400 top-[62%] z-50">
-            <FiSmartphone size={30} />
+          <a
+            href="#contact"
+            className="m-2.5 flex justify-center shadow-lg p-4 w-[75%] rounded-full shadow-gray-400 hover:scale-110 duration-300 bg-white/80 text-black"
+          >
+            <FiSmartphone size={25}></FiSmartphone>
           </a>
         </div>
-      </div>
-    </div>
+      </MainNavIcons>
+      
+    </NavigationBar>
   );
 };
+
+
+const NavigationBar = styled.div``
+const SideNavIcons = styled.div``
+const MainNavIcons = styled.div``
 
 export default Navbar;
