@@ -13,7 +13,7 @@ const Home = () => {
           <CenterIntro className="flex flex-col items-center justify-center w-full h-full max-w-3xl m-auto lg:items-start">
             <IntroText>
 
-              <Heading className="text-4xl font-semibold text-gray-800 sm:text-5xl font-Poppins animate">Hi, This is Karthikeyan,</Heading>
+              <Heading className="text-4xl font-semibold text-gray-800 sm:text-5xl font-Poppins animate">Hi, This is Tech Monkey,</Heading>
                 {/* <div className="text-2xl sm:text-3xl"> */}
                   <TypeAnimation
                   className="flex justify-center pt-2 text-3xl sm:text-4xl"
@@ -47,7 +47,5 @@ const BackgroundFade = styled.div``
 const IntroText = styled.div``
 const SocialMedia = styled.div``
 const CenterIntro = styled.div``
-const Heading = styled.div`
-animation: showRight 3000ms ease forwards;`
-
+const Heading = styled.div``
 export default Home
