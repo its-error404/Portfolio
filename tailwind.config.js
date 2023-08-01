@@ -13,6 +13,7 @@ export default {
         'Raleway': ['Raleway', 'sans-serif'],
         'Poppins': ['Poppins', 'sans-serif'],
         'BebasNeue': ['Bebas Neue', 'sans-serif'],
+        'Roboto-condensed': ['Roboto Condensed', 'sans-serif']
     },
     colors: {
       'color-back': '#ECF1FD',

@@ -8,8 +8,8 @@ import '/animations.css'
 const Home = () => {
   return (
     <HomePage id="home">
-        <img className="object-cover object-right w-full h-screen scale-x-1" src="/src/assets/images/background.jpg" alt=""></img>
-        <BackgroundFade className="absolute top-0 left-0 w-full h-screen bg-white/50">
+        <img className="object-cover object-right w-full h-screen scale-x-1 bg-gradient-to-t from-black" src="/src/assets/images/background.jpg" alt=""></img>
+        <BackgroundFade className="absolute top-0 left-0 w-full h-screen bg-white/10">
           <CenterIntro className="flex flex-col items-center justify-center w-full h-full max-w-3xl m-auto lg:items-start">
             <IntroText>
 
@@ -18,7 +18,7 @@ const Home = () => {
                   <TypeAnimation
                   className="flex justify-center pt-2 text-3xl sm:text-4xl"
                   sequence={[ 'An Ethical Hacker',1000, 'A Web Developer',1000, 'A CTF Player',1000, 'A Tech Enthusiast',1000, 'A Blogger',1000 ]}
-                  speed={55}
+                  speed={60}
                   wrapper={'div'}
                   repeat={Infinity}
                   cursor={true}

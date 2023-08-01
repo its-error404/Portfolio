@@ -4,6 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&family=Raleway:ital,wght@0,200;0,300;0,400;0,700;0,900;1,100;1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,4 +13,17 @@
 body
 {
     background-color: #ECF1FD;
+}
+
+.images > div 
+{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    /* padding-right: 4px; */
+}
+
+.images{
+    grid-row-gap: 20px;
 }
